@@ -22,6 +22,36 @@ model Student {
   yearOfStudy     String
   rollNumber      String   @unique
   previousScore   String?
+
+  // Commitment & expectations
+  hoursPerWeek        String?
+  durationMonths      String?
+  workMode            String?
+  outcomeGoals        String?   // JSON array of strings
+
+  // Prior experience
+  programmingLangs    String?   // JSON array of strings
+  hardwareLevel       String?
+  toolsKnown          String?   // JSON array of strings
+  pastProjects        String?
+  githubUrl           String?
+  coursework          String?
+
+  // Free-text "other" escape hatches
+  otherOutcome        String?
+  otherLangs          String?
+  otherTools          String?
+  additionalInfo      String?
+
+  // Project preferences (JSON object: { [projectId]: priority })
+  projectPreferences  String?
+
+  // Open-ended own-project proposal (optional)
+  ownProjectTitle        String?
+  ownProjectDescription  String?
+  ownProjectResources    String?
+  ownProjectOutcome      String?
+
   status          String   @default("pending")
   notes           String?
   createdAt       DateTime @default(now())

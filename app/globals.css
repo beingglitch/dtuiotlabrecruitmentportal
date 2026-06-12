@@ -120,3 +120,89 @@ a { color: inherit; text-decoration: none; }
   align-items: center; justify-content: center; padding: 20px; z-index: 50; }
 .modal { background: #fff; border-radius: var(--radius); max-width: 560px; width: 100%;
   max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+
+/* ---------- chip-group (multi-select) ---------- */
+.chip-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 500; padding: 6px 12px;
+  border: 1px solid var(--line-strong); background: #fff;
+  border-radius: 999px; cursor: pointer; transition: .12s;
+  user-select: none; color: var(--ink);
+}
+.chip:hover { border-color: var(--ink); }
+.chip[aria-pressed="true"] {
+  background: var(--ink); color: var(--paper); border-color: var(--ink);
+}
+.chip.chip-amber[aria-pressed="true"] {
+  background: var(--amber); border-color: var(--amber); color: #fff;
+}
+
+/* ---------- tier pill ---------- */
+.tier-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 10.5px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; padding: 3px 9px; border-radius: 4px;
+}
+.tier-foundation { background: var(--teal-soft); color: var(--teal); }
+.tier-applied    { background: var(--amber-soft); color: var(--amber); }
+.tier-research   { background: var(--paper-2); color: var(--ink); border: 1px solid var(--line-strong); }
+
+/* ---------- project brief card (form) ---------- */
+.project-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 18px 20px;
+  margin-bottom: 14px; background: var(--paper);
+  transition: .15s;
+}
+.project-card.is-selected {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px var(--amber-soft);
+  background: #fff;
+}
+.project-card-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; margin-bottom: 8px;
+}
+.project-card h3 {
+  font-size: 15.5px; font-weight: 700; letter-spacing: -.005em;
+  margin-bottom: 4px;
+}
+.project-card .domain {
+  font-size: 12px; color: var(--muted); font-weight: 500;
+  margin-bottom: 10px;
+}
+.project-card .summary {
+  font-size: 13.5px; color: var(--ink); line-height: 1.55;
+  margin-bottom: 12px;
+}
+.project-meta {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 8px 18px; font-size: 12.5px;
+  padding-top: 10px; border-top: 1px dashed var(--line);
+}
+.project-meta dt {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 2px;
+}
+.project-meta dd { color: var(--ink); }
+.project-card .priority-row {
+  display: flex; align-items: center; gap: 10px; margin-top: 14px;
+  padding-top: 12px; border-top: 1px solid var(--line);
+}
+.project-card .priority-row label {
+  font-size: 11.5px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--muted); margin: 0;
+}
+.project-card .priority-row select { max-width: 200px; flex: 1; }
+@media (max-width: 620px) {
+  .project-meta { grid-template-columns: 1fr; }
+  .project-card .priority-row { flex-direction: column; align-items: stretch; }
+  .project-card .priority-row select { max-width: 100%; }
+}
+
+/* ---------- key/value row (admin detail) ---------- */
+.kv { display: grid; grid-template-columns: 160px 1fr; gap: 6px 16px; font-size: 13.5px; }
+.kv dt { color: var(--muted); font-weight: 600; }
+.kv dd { color: var(--ink); }

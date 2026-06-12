@@ -4,7 +4,16 @@ import { prisma } from "@/lib/prisma";
 export async function PATCH(req, { params }) {
   try {
     const b = await req.json();
-    const allowed = ["fullName","dateOfBirth","gender","email","phone","address","city","state","program","branch","yearOfStudy","rollNumber","previousScore","status","notes"];
+    const allowed = [
+      "fullName","dateOfBirth","gender","email","phone","address","city","state",
+      "program","branch","yearOfStudy","rollNumber","previousScore","status","notes",
+      "hoursPerWeek","durationMonths","workMode","outcomeGoals",
+      "programmingLangs","hardwareLevel","toolsKnown",
+      "pastProjects","githubUrl","coursework",
+      "otherOutcome","otherLangs","otherTools","additionalInfo",
+      "projectPreferences",
+      "ownProjectTitle","ownProjectDescription","ownProjectResources","ownProjectOutcome",
+    ];
     const data = {};
     for (const k of allowed) if (k in b) data[k] = b[k];
     const updated = await prisma.student.update({ where: { id: params.id }, data });
