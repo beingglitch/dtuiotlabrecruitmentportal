@@ -11,7 +11,7 @@ const prisma = new PrismaClient();
 // so the public detail viewport has more depth than the one-line summary.
 const OVERVIEWS = {
   "mil-gcs": "A modernised, hardened ground control station built from the ground up for Indian defence operations. Multi-vehicle ops, AES-256-encrypted MAVLink, mission planning with no-fly zones and offline tile maps, a 1080p video pipeline, and a rugged enclosure that survives field deployment.",
-  "multi-bearer-comms": "A comms layer that fails over seamlessly between satellite (Iridium), cellular (4G/5G), point-to-point RF, and LoRa based on live link-quality measurement. Handles low-bandwidth telemetry and high-bandwidth video. Maps directly to the ANRF MAHA Drones grant theme.",
+  "multi-bearer-comms": "A comms layer that fails over seamlessly between satellite (Iridium), cellular (4G/5G), point-to-point RF, and LoRa based on live link-quality measurement. Handles low-bandwidth telemetry and high-bandwidth video.",
   "manet": "A self-forming, self-healing wireless mesh across 8+ nodes. Implement BATMAN-adv or a custom OLSR variant in user space. Characterise throughput, latency, and repair time. Produce a research-grade dataset and analysis.",
   "swarm": "A coordinated drone swarm covering formation hold, leader election, and distributed task allocation. Initial development entirely in SITL (zero hardware risk). Optional Phase 2 on Crazyflie-class micro-drones. Same architecture used in production multi-agent UAV ops.",
   "web-sitl": "Browser-accessible Gazebo and Isaac Sim. Students click a button, pick a world, and start running missions in a simulated drone or rover without installing 8 GB of sim software. Becomes the lab's standard onboarding tool.",
