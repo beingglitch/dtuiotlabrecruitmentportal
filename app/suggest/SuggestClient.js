@@ -89,6 +89,7 @@ export default function SuggestClient() {
               <div className="brand-title">IoT Research and Innovation Lab</div>
               <div className="brand-sub">Department of Software Engineering</div>
               <div className="brand-sub">Delhi Technological University</div>
+              <div className="brand-sub">Delhi, India</div>
             </div>
           </Link>
           <div className="nav-links">
@@ -219,7 +220,15 @@ export default function SuggestClient() {
       </main>
 
       <footer className="site-footer">
-        IoT Research Lab · Department of Software Engineering · Delhi Technological University
+        <div className="footer-brand">
+          <div className="footer-title">IoT Research and Innovation Lab</div>
+          <div>Department of Software Engineering</div>
+          <div>Delhi Technological University</div>
+          <div>Delhi, India <span aria-label="India">🇮🇳</span></div>
+        </div>
+        <div className="footer-meta">
+          <a className="link" href="mailto:sanjaypatidar@dtu.ac.in">sanjaypatidar@dtu.ac.in</a>
+        </div>
       </footer>
     </>
   );

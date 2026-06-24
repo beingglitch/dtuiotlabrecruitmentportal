@@ -404,13 +404,42 @@ a.link:hover { color: var(--ink); }
   .admin-topbar-actions .btn { font-size: 12px; padding: 6px 10px; }
 }
 
+/* apply CTA strip — sits between contact and footer */
+.apply-cta {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 56px 22px;
+  margin-top: 24px;
+}
+.apply-cta-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 28px; flex-wrap: wrap;
+}
+.apply-cta h2 { color: var(--paper); }
+.apply-cta h2 em { color: var(--amber); font-style: italic; }
+.apply-cta .eyebrow { color: var(--amber); }
+.apply-cta .btn-ghost { color: var(--paper); border-color: rgba(251,248,241,.35); }
+.apply-cta .btn-ghost:hover { border-color: var(--paper); }
+@media (max-width: 720px) {
+  .apply-cta { padding: 40px 18px; }
+  .apply-cta-inner { gap: 18px; }
+  .apply-cta h2 { font-size: 26px; }
+}
+
 /* footer */
 .site-footer {
-  padding: 28px 0 36px;
-  text-align: center;
+  padding: 32px 22px 36px;
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+  max-width: 1180px; margin: 0 auto;
   font-size: 12.5px; color: var(--muted);
   border-top: 1px solid var(--line);
-  margin-top: 48px;
+}
+.site-footer .footer-brand { line-height: 1.5; }
+.site-footer .footer-title { font-weight: 700; color: var(--ink); font-size: 13.5px; margin-bottom: 2px; }
+.site-footer .footer-meta { font-size: 12.5px; }
+@media (max-width: 540px) {
+  .site-footer { flex-direction: column; gap: 12px; padding: 24px 18px 28px; }
 }
 
 /* ─────────────────────────── landing nav ─────────────────────────── */
@@ -571,6 +600,23 @@ a.link:hover { color: var(--ink); }
 .preview-tile .tag { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); margin-bottom: 8px; }
 .preview-tile h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
 .preview-tile p { font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+.preview-tile .focus-label {
+  font-size: 11.5px; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--ink);
+  margin-top: 14px; margin-bottom: 6px;
+}
+.preview-tile .focus-list {
+  list-style: none; padding: 0; margin: 0;
+  font-size: 13.5px; line-height: 1.55; color: var(--ink);
+}
+.preview-tile .focus-list li {
+  padding-left: 14px; position: relative; margin-bottom: 4px;
+}
+.preview-tile .focus-list li::before {
+  content: ""; position: absolute; left: 0; top: 9px;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--amber);
+}
 
 /* contact section */
 .contact-grid {

@@ -57,6 +57,7 @@ export default function LandingPage() {
               <div className="brand-title">IoT Research and Innovation Lab</div>
               <div className="brand-sub">Department of Software Engineering</div>
               <div className="brand-sub">Delhi Technological University</div>
+              <div className="brand-sub">Delhi, India</div>
             </div>
           </Link>
           <div className="nav-links">
@@ -75,12 +76,11 @@ export default function LandingPage() {
         <div className="wrap-wide" style={{ width: "100%" }}>
           <div className="eyebrow hero-anim" style={{ marginBottom: 16 }}>
             <span style={{ color: "var(--amber)", fontWeight: 700, letterSpacing: ".14em", textTransform: "uppercase", fontSize: 11 }}>
-              · Call for Applications · 2026
+              · Call for Applications ·
             </span>
           </div>
           <h1 className="hero-anim">
-            Research projects at the<br />
-            <em>IoT Research Lab</em>, DTU.
+            Research Projects at <em>IoT Research Lab</em>, DTU.
           </h1>
           <p className="lede hero-anim">
             The IoT Research Lab at the Department of Software Engineering,
@@ -107,14 +107,15 @@ export default function LandingPage() {
           <div className="about-grid">
             <div className="body gsap-fade">
               <p>
-                The lab focuses on building advanced, tangible systems for AI and
-                IoT-based autonomous systems, resilient communications, and edge AI,
-                with a strong emphasis on defence-technology applications.
+                The lab focuses on building advanced, tangible systems for AI
+                and IOT based autonomous systems, resilient communications, and
+                edge AI, with a strong emphasis on defense technology applications.
               </p>
               <p>
-                Students selected for these positions will work in small teams alongside
-                practising engineers — moving away from toy projects to deliver functioning
-                prototypes, open-source libraries, or publishable research papers.
+                Students selected for these positions will work in small teams
+                alongside practicing engineers, moving away from toy projects
+                to deliver functioning prototypes, open-source libraries, or
+                publishable research papers.
               </p>
             </div>
             <aside className="about-card gsap-fade">
@@ -137,35 +138,44 @@ export default function LandingPage() {
       {/* Projects preview */}
       <section className="landing-section" id="projects" ref={(el) => (sectionsRef.current[1] = el)}>
         <div className="wrap-wide">
-          <div className="eyebrow gsap-fade">Available project tracks</div>
+          <div className="eyebrow gsap-fade">Available Project Tracks</div>
           <h2 className="gsap-fade">
-            Pick a track. <em>Ship something real.</em>
+            Two tracks. <em>Pick yours.</em>
           </h2>
           <p className="body gsap-fade">
             Applicants can apply to one of two distinct tracks based on their
-            interests and skills. Each project has a full brief on the projects page.
-            Have a different idea? Suggest it.
+            interests and skills.
           </p>
           <div className="preview-tiles">
             <div className="preview-tile gsap-fade">
-              <div className="tag">Group A · Multi-disciplinary team projects</div>
+              <div className="tag">Group A · Multi-Disciplinary Team Projects</div>
               <h3>Long-term, collaborative work.</h3>
               <p>
-                A few months of focused effort within small teams. Core focus areas:
-                military-grade Ground Control Systems (GCS); resilient communication
-                systems and mesh networks; drone swarms and counter-drone detection;
-                advanced perception systems for autonomous platforms.
+                These long-term, collaborative projects require a few months
+                of focused efforts within small teams.
               </p>
+              <div className="focus-label">Core focus areas include:</div>
+              <ul className="focus-list">
+                <li>Military-grade Ground Control Systems (GCS)</li>
+                <li>Resilient communication systems and mesh networks</li>
+                <li>Drone swarms and counter-drone detection technologies</li>
+                <li>Advanced perception systems for autonomous platforms</li>
+              </ul>
             </div>
             <div className="preview-tile gsap-fade">
-              <div className="tag">Group B · Solo engineering modules</div>
-              <h3>One person. One concrete deliverable.</h3>
+              <div className="tag">Group B · Solo Engineering Modules</div>
+              <h3>One developer, one deliverable.</h3>
               <p>
-                Highly focused, individual modules. Core focus areas:
-                flight-controller and Electronic Speed Controller (ESC) firmware;
-                GNSS driver implementation and LoRa telemetry integration;
-                ROS2 sensor drivers; RF spectrum analysis and network diagnostics.
+                These are highly focused, individual modules where a single
+                developer handles a specific, concrete deliverable.
               </p>
+              <div className="focus-label">Core focus areas include:</div>
+              <ul className="focus-list">
+                <li>Flight-controller and Electronic Speed Controller (ESC) firmware development</li>
+                <li>GNSS driver implementation and LoRa telemetry integration</li>
+                <li>Robot Operating System (ROS2) sensor drivers</li>
+                <li>RF spectrum analysis and network diagnostics</li>
+              </ul>
             </div>
           </div>
           <div className="cta-row gsap-fade" style={{ marginTop: 36 }}>
@@ -213,8 +223,34 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Apply CTA strip */}
+      <section className="apply-cta" ref={(el) => (sectionsRef.current[3] = el)}>
+        <div className="wrap-wide apply-cta-inner">
+          <div className="gsap-fade">
+            <div className="eyebrow" style={{ marginBottom: 10 }}>How to apply</div>
+            <h2 style={{ margin: 0 }}>
+              Apply through below link <em>and see project details.</em>
+            </h2>
+          </div>
+          <div className="cta-row gsap-fade" style={{ marginTop: 0 }}>
+            <Link href="/projects" className="btn btn-amber" style={{ padding: "13px 24px" }}>
+              See project details & apply →
+            </Link>
+            <Link href="/suggest" className="btn btn-ghost">Suggest a project</Link>
+          </div>
+        </div>
+      </section>
+
       <footer className="site-footer">
-        IoT Research Lab · Department of Software Engineering · Delhi Technological University
+        <div className="footer-brand">
+          <div className="footer-title">IoT Research and Innovation Lab</div>
+          <div>Department of Software Engineering</div>
+          <div>Delhi Technological University</div>
+          <div>Delhi, India <span aria-label="India">🇮🇳</span></div>
+        </div>
+        <div className="footer-meta">
+          <a className="link" href="mailto:sanjaypatidar@dtu.ac.in">sanjaypatidar@dtu.ac.in</a>
+        </div>
       </footer>
     </>
   );

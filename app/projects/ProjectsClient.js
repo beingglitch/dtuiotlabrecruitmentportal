@@ -93,6 +93,7 @@ export default function ProjectsClient({ projects }) {
               <div className="brand-title">IoT Research and Innovation Lab</div>
               <div className="brand-sub">Department of Software Engineering</div>
               <div className="brand-sub">Delhi Technological University</div>
+              <div className="brand-sub">Delhi, India</div>
             </div>
           </Link>
           <div className="nav-links">
