@@ -54,9 +54,9 @@ export default function LandingPage() {
           <Link href="/" className="nav-brand">
             <img src="/dtu-logo.png" alt="DTU" onError={(e) => (e.currentTarget.style.display = "none")} />
             <div className="brand-text">
-              IoT Research Lab
-              <br />
-              <small>Dept. of Software Engineering · DTU</small>
+              <div className="brand-title">IoT Research and Innovation Lab</div>
+              <div className="brand-sub">Department of Software Engineering</div>
+              <div className="brand-sub">Delhi Technological University</div>
             </div>
           </Link>
           <div className="nav-links">
@@ -75,21 +75,21 @@ export default function LandingPage() {
         <div className="wrap-wide" style={{ width: "100%" }}>
           <div className="eyebrow hero-anim" style={{ marginBottom: 16 }}>
             <span style={{ color: "var(--amber)", fontWeight: 700, letterSpacing: ".14em", textTransform: "uppercase", fontSize: 11 }}>
-              · IoT Research Lab · 2026
+              · Call for Applications · 2026
             </span>
           </div>
           <h1 className="hero-anim">
-            Build the systems<br />
-            India's <em>defence-tech</em> is waiting for.
+            Research projects at the<br />
+            <em>IoT Research Lab</em>, DTU.
           </h1>
           <p className="lede hero-anim">
-            A new research lab at the Department of Software Engineering, DTU.
-            Built around real projects in autonomous systems, resilient comms, and edge AI.
-            Founded by Prof. Sanjay Patidar.
+            The IoT Research Lab at the Department of Software Engineering,
+            Delhi Technological University (DTU), invites applications from
+            motivated students to work on real-world, high-impact research projects.
           </p>
           <div className="cta-row hero-anim">
             <Link href="/projects" className="btn btn-amber" style={{ padding: "13px 24px" }}>
-              Explore projects →
+              Apply & see project details →
             </Link>
             <a href="#about" className="btn btn-ghost">What we do</a>
           </div>
@@ -107,15 +107,14 @@ export default function LandingPage() {
           <div className="about-grid">
             <div className="body gsap-fade">
               <p>
-                The IoT Research Lab is a new initiative at DTU's Department of Software
-                Engineering. We work on autonomous systems, communications, and edge AI.
+                The lab focuses on building advanced, tangible systems for AI and
+                IoT-based autonomous systems, resilient communications, and edge AI,
+                with a strong emphasis on defence-technology applications.
               </p>
               <p>
-                Every project ships something tangible: a working prototype, a research
-                paper, or an open-source library. No toy projects.
-              </p>
-              <p>
-                Students work in small teams alongside practising engineers.
+                Students selected for these positions will work in small teams alongside
+                practising engineers — moving away from toy projects to deliver functioning
+                prototypes, open-source libraries, or publishable research papers.
               </p>
             </div>
             <aside className="about-card gsap-fade">
@@ -138,37 +137,40 @@ export default function LandingPage() {
       {/* Projects preview */}
       <section className="landing-section" id="projects" ref={(el) => (sectionsRef.current[1] = el)}>
         <div className="wrap-wide">
-          <div className="eyebrow gsap-fade">Projects to join</div>
+          <div className="eyebrow gsap-fade">Available project tracks</div>
           <h2 className="gsap-fade">
-            Pick a project. <em>Ship something real.</em>
+            Pick a track. <em>Ship something real.</em>
           </h2>
           <p className="body gsap-fade">
-            Two tracks. Each project has a full brief on the projects page.
-            Read the briefs, apply to the one that fits. Have a different idea? Suggest it.
+            Applicants can apply to one of two distinct tracks based on their
+            interests and skills. Each project has a full brief on the projects page.
+            Have a different idea? Suggest it.
           </p>
           <div className="preview-tiles">
             <div className="preview-tile gsap-fade">
-              <div className="tag">Group A · Multi-disciplinary</div>
-              <h3>Big projects. Cross-team work.</h3>
+              <div className="tag">Group A · Multi-disciplinary team projects</div>
+              <h3>Long-term, collaborative work.</h3>
               <p>
-                Several months of focused work in small teams.
-                Topics include military-grade GCS, resilient communications, mesh networks,
-                drone swarms, counter-drone detection, and perception for autonomous systems.
+                A few months of focused effort within small teams. Core focus areas:
+                military-grade Ground Control Systems (GCS); resilient communication
+                systems and mesh networks; drone swarms and counter-drone detection;
+                advanced perception systems for autonomous platforms.
               </p>
             </div>
             <div className="preview-tile gsap-fade">
-              <div className="tag">Group B · Solo modules</div>
-              <h3>One person. One deliverable.</h3>
+              <div className="tag">Group B · Solo engineering modules</div>
+              <h3>One person. One concrete deliverable.</h3>
               <p>
-                Smaller, focused modules you can ship on your own:
-                flight-controller firmware, GNSS drivers, ESC firmware, LoRa telemetry,
-                ROS2 sensor drivers, RF spectrum analysis, network diagnostics.
+                Highly focused, individual modules. Core focus areas:
+                flight-controller and Electronic Speed Controller (ESC) firmware;
+                GNSS driver implementation and LoRa telemetry integration;
+                ROS2 sensor drivers; RF spectrum analysis and network diagnostics.
               </p>
             </div>
           </div>
           <div className="cta-row gsap-fade" style={{ marginTop: 36 }}>
             <Link href="/projects" className="btn btn-amber" style={{ padding: "13px 24px" }}>
-              See all projects →
+              Apply & see project details →
             </Link>
             <Link href="/suggest" className="btn btn-ghost">Suggest a project</Link>
           </div>

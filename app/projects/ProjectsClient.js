@@ -90,9 +90,9 @@ export default function ProjectsClient({ projects }) {
           <Link href="/" className="nav-brand">
             <img src="/dtu-logo.png" alt="DTU" onError={(e) => (e.currentTarget.style.display = "none")} />
             <div className="brand-text">
-              IoT Research Lab
-              <br />
-              <small>Dept. of Software Engineering · DTU</small>
+              <div className="brand-title">IoT Research and Innovation Lab</div>
+              <div className="brand-sub">Department of Software Engineering</div>
+              <div className="brand-sub">Delhi Technological University</div>
             </div>
           </Link>
           <div className="nav-links">

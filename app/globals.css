@@ -432,7 +432,9 @@ a.link:hover { color: var(--ink); }
 .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; min-width: 0; }
 .nav-brand img { height: 32px; width: 32px; object-fit: contain; flex-shrink: 0; }
 .nav-brand small { color: var(--muted); font-weight: 500; }
-.nav-brand .brand-text { min-width: 0; line-height: 1.3; }
+.nav-brand .brand-text { min-width: 0; line-height: 1.25; }
+.nav-brand .brand-title { font-weight: 700; }
+.nav-brand .brand-sub { color: var(--muted); font-weight: 500; font-size: 11.5px; }
 .nav-links { display: flex; align-items: center; gap: 14px; font-size: 14px; flex-wrap: wrap; justify-content: flex-end; }
 .nav-links a { color: var(--muted); transition: color .15s; white-space: nowrap; }
 .nav-links a:hover { color: var(--ink); }
@@ -441,6 +443,7 @@ a.link:hover { color: var(--ink); }
   .nav-inner { padding: 10px 14px; flex-wrap: wrap; gap: 8px 12px; }
   .nav-brand { font-size: 13px; flex: 1 1 auto; }
   .nav-brand small { display: none; }
+  .nav-brand .brand-sub { display: none; }
   .nav-brand img { height: 26px; width: 26px; }
   .nav-links {
     gap: 10px 14px; font-size: 13px;
